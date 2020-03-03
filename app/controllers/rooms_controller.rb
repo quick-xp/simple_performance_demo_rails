@@ -5,4 +5,8 @@ class RoomsController < ApplicationController
     render json: {status: 'ok', name: "Room#{rand(100000)}", owner_id: rand(100000)}
   end
 
+  def show
+    render json: {status: 'ok', name: "Room#{params[:id]}"}
+  end
+
 end
